@@ -1,0 +1,35 @@
+In JAVA multiple inheritance is not supported
+for example:-
+
+class A{
+int n = 6;
+}
+class B{
+int n = 10;
+}
+class c extends A, B{
+System.out.println(n);//here the problem occurs which n its going to print
+}
+
+that's why multiple inheritance is not supported in JAVA
+
+====================================================================================================
+
+In JAVA hybrid Inheritance is also not supported
+Hybrid Inheritance means have both the single and multiple Inheritance
+As we know that multiple inheritance is not allowed in JAVA, hybrid contains multiple inheritance
+    hence, hybrid inheritance is also not allowed in JAVA
+
+for example:
+
+class A{
+int n;
+}
+class B extends A{
+}
+class C extends A{
+}
+class D extends B, C{
+}
+
+// here the problem occurs hence, it is also not allowed in JAVA

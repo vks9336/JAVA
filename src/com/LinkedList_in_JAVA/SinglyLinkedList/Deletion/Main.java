@@ -1,0 +1,21 @@
+package com.LinkedList_in_JAVA.SinglyLinkedList.Deletion;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.addInFront(12);
+        list.addInLast(13);
+        list.addInLast(56);
+        list.addInLast(45);
+        list.addInLast(67);
+        list.addInLast(18);
+        System.out.println("Before Deletion operation list is : ");
+        list.display();
+        Node deleted = list.deleteFromGivenIndex(3);
+        System.out.println();
+        System.out.printf("Deleted Node is : %d\n", deleted.data);
+        System.out.println();
+        System.out.println("After deletion operation list is : ");
+        list.display();
+    }
+}
