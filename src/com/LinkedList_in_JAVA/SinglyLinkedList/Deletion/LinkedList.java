@@ -1,7 +1,7 @@
 package com.LinkedList_in_JAVA.SinglyLinkedList.Deletion;
 
 public class LinkedList {
-    private Node head;
+    public Node head;
 
     public  Node deleteFromFront(){
         if(head == null || head.next == null) return null;

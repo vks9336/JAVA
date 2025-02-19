@@ -1,7 +1,6 @@
-package com.LinkedList_in_JAVA.SinglyLinkedList.ReverseLinkedList;
+package com.LinkedList_in_JAVA.SinglyLinkedList.ReverseList;
 
 import com.LinkedList_in_JAVA.SinglyLinkedList.Addition.LinkedList;
-import com.LinkedList_in_JAVA.SinglyLinkedList.Addition.Node;
 
 public class Main {
     public static void main(String[] args) {
