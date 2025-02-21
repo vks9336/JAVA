@@ -1,5 +1,8 @@
 package com.LinkedList_in_JAVA.SinglyLinkedList.Deletion;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LinkedList {
     public Node head;
 
@@ -126,6 +129,24 @@ public class LinkedList {
         newNode.next = temp.next;
         temp.next = newNode;
 
+    }
+
+
+    public Node deleteDuplicates(){
+        Map<Integer, Integer> map = new HashMap<>();
+        Node temp = head;
+        while(temp != null){
+            map.put(temp.data, map.getOrDefault(temp.data, 0) + 1);
+            temp = temp.next;
+        }
+        Node ans = null;
+        for(int key : map.keySet()){
+            if(map.get(key) == 1){
+                ans.data = key;
+                ans = ans.next;
+            }
+        }
+        return ans;
     }
 
     public void display(){
