@@ -3,6 +3,7 @@ package com.DynamicProgramming_in_JAVA;
 import java.util.Arrays;
 
 public class UniquePath {
+    //Memoization technique
     private static int uniquePath(int i, int j, int[][] arr, int[][] dp){
         if(i == 0 && j == 0) return 1;
         if(i < 0 || j < 0) return 0;
@@ -26,6 +27,6 @@ public class UniquePath {
             Arrays.fill(row, -1);
         }
         int ans = uniquePath(m - 1, n - 1, grid, dp);
-        System.out.printf("Total number of unique paths from (0, 0) to (%d, %d) is : %d",m - 1, n - 1, ans);
+        System.out.printf("Total number of unique paths from (0, 0) to (%d, %d) is : %d.",m - 1, n - 1, ans);
     }
 }
