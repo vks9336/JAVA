@@ -1,11 +1,11 @@
 package com.Trees_in_JAVA.BinaryTree;
 // creation of a tree
-public class Node {
+public class TreeNode {
     int data;
-    Node left;
-    Node right;
+    TreeNode left;
+    TreeNode right;
 
-    public Node(int data) {
+    public TreeNode(int data) {
         this.data = data;
         left = null;
         right = null;

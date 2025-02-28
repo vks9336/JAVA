@@ -5,13 +5,13 @@ import java.util.List;
 
 public class BinaryTree {
     public static void main(String[] args) {
-        Node root = new Node(12);
-        root.left = new Node(23);
-        root.right = new Node(6);
-        root.left.left = new Node(4);
-        root.left.right = new Node(8);
-        root.right.left = new Node(67);
-        root.right.right = new Node(56);
+        TreeNode root = new TreeNode(12);
+        root.left = new TreeNode(23);
+        root.right = new TreeNode(6);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(8);
+        root.right.left = new TreeNode(67);
+        root.right.right = new TreeNode(56);
 
 
         //Inorder Traversal of the Tree
