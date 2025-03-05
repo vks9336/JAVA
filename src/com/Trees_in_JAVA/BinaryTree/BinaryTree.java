@@ -1,46 +1,69 @@
 package com.Trees_in_JAVA.BinaryTree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree {
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(12);
-        root.left = new TreeNode(23);
-        root.right = new TreeNode(6);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(8);
-        root.right.left = new TreeNode(67);
-        root.right.right = new TreeNode(56);
+    public TreeNode root;
 
+    public void insert(int data){
+        TreeNode node = new TreeNode(data);
+        if(root == null){
+            root = node;
+            return;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            TreeNode temp = queue.poll();
+            if (temp.left == null) {
+                temp.left = new TreeNode(data);
+                return;
+            } else {
+                queue.add(temp.left);
+            }
+            if(temp.right == null){
+                temp.right = new TreeNode(data);
+                return;
+            }
+            else queue.add(temp.right);
+        }
+    }
 
-        //Inorder Traversal of the Tree
-        List<Integer> list = new ArrayList<>();
-        List<Integer> list2 = InorderTraversal.inorder(root, list);
-        System.out.println("Inorder Traversal of the Tree : ");
-        System.out.println(list2);
-        System.out.println();
+    public void inorder(TreeNode root){
+        if(root == null) return;
+        inorder(root.left);
+        System.out.printf("%d ", root.data);
+        inorder(root.right);
+    }
 
+    public void preorder(TreeNode root){
+        if(root == null) return;
+        System.out.printf("%d ", root.data);
+        preorder(root.left);
+        preorder(root.right);
+    }
 
-        list.clear();
-        list2.clear();
+    public void postorder(TreeNode root){
+        if(root == null) return;
+        postorder(root.left);
+        postorder(root.right);
+        System.out.printf("%d ", root.data);
+    }
 
+    public void levelOrder(TreeNode root){
+        if(root == null) return;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            for(int i = 0; i < size; i++){
+                TreeNode temp = queue.poll();
+                System.out.printf("%d ", temp.data);
 
-        // Postorder Traversal of the Tree
-        list2 = PostorderTraversal.postorder(root, list);
-        System.out.println("Postorder Traversal of the Tree : ");
-        System.out.println(list2);
-        System.out.println();
-
-        list.clear();
-        list2.clear();
-
-
-        // Preorder Traversal the Tree
-        list2 = PreorderTraversal.preorder(root, list);
-        System.out.println("Preorder Traversal of the Tree : ");
-        System.out.println(list2);
-        System.out.println();
-
+                if(temp.left != null) queue.add(temp.left);
+                if(temp.right != null) queue.add(temp.right);
+            }
+        }
     }
 }

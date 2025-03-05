@@ -65,7 +65,6 @@ public class CoinChange {
         if(ans >= Integer.MAX_VALUE / 2) return -1;
         return ans;
     }
-
     //main method
     public static void main(String[] args) {
         int[] coins = {1,2,5};
