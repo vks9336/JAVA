@@ -14,7 +14,8 @@ public class Main {
         list.addInFront(18);
         list.addInFront(19);
         list.addInFront(20);
-        list.head = Reverse.reverseList(list.head);
+//        list.head = Reverse.reverseList(list.head);
+        list.head = Reverse.reverseKGroup(list.head, 3);
         list.display();
     }
 }
