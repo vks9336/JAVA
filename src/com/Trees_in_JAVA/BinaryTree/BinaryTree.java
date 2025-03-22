@@ -1,6 +1,8 @@
 package com.Trees_in_JAVA.BinaryTree;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class BinaryTree {
@@ -65,5 +67,32 @@ public class BinaryTree {
                 if(temp.right != null) queue.add(temp.right);
             }
         }
+    }
+
+    private void preorder(TreeNode root, List<Integer> list){
+        if(root == null) return;
+
+        list.add(root.data);
+        preorder(root.left, list);
+        preorder(root.right, list);
+
+    }
+
+    public TreeNode flatten(TreeNode root){
+        if(root == null) return root;
+
+        List<Integer> list = new ArrayList<>();
+        preorder(root, list);
+
+        TreeNode dummyNode = new TreeNode(-1);
+        TreeNode temp = dummyNode;
+
+        for(int num : list){
+            temp.right = new TreeNode(num);
+            temp = temp.right;
+        }
+
+        root = dummyNode.right;
+        return root;
     }
 }

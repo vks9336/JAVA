@@ -28,5 +28,12 @@ public class Main {
 
         System.out.println("Level Order Traversal : ");
         tree.levelOrder(tree.root);
+
+        System.out.println("Tree before flatten : ");
+        tree.preorder(tree.root);
+        System.out.println();
+        tree.flatten(tree.root);
+        System.out.println("Tree after flatten : ");
+        tree.preorder(tree.root);
     }
 }
