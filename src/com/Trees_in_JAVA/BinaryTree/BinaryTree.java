@@ -8,6 +8,33 @@ import java.util.Queue;
 public class BinaryTree {
     public TreeNode root;
 
+    public void randomInsert(int[] arr) {
+        if (arr.length == 0) return;
+
+        root = new TreeNode(arr[0]);
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        int i = 1;
+        while (i < arr.length) {
+            TreeNode parent = queue.poll();
+
+            if (arr[i] != 0) {
+                assert parent != null;
+                parent.left = new TreeNode(arr[i]);
+                queue.offer(parent.left);
+            }
+            i++;
+
+            if (i < arr.length && arr[i] != 0) {
+                assert parent != null;
+                parent.right = new TreeNode(arr[i]);
+                queue.offer(parent.right);
+            }
+            i++;
+        }
+    }
+
     public void insert(int data){
         TreeNode node = new TreeNode(data);
         if(root == null){
@@ -61,6 +88,7 @@ public class BinaryTree {
             int size = queue.size();
             for(int i = 0; i < size; i++){
                 TreeNode temp = queue.poll();
+                assert temp != null;
                 System.out.printf("%d ", temp.data);
 
                 if(temp.left != null) queue.add(temp.left);
