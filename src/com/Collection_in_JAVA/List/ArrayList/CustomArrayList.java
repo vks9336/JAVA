@@ -1,6 +1,5 @@
 package com.Collection_in_JAVA.List.ArrayList;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CustomArrayList<T> {
@@ -24,9 +23,7 @@ public class CustomArrayList<T> {
     }
     private void resize() {
         Object[] temp = new Object[data.length * 2];
-        for(int i = 0; i < data.length; i++){
-            temp[i] = data[i];
-        }
+        System.arraycopy(data, 0, temp, 0, data.length);
         data = temp;
     }
     public T get(int index){
@@ -50,9 +47,6 @@ public class CustomArrayList<T> {
 
     @Override
     public String toString() {
-        return "Your List :[" +
-                "data=" + Arrays.toString(data) +
-                ", size=" + size +
-                ']';
+        return STR."Your List :[data=\{Arrays.toString(data)}, size=\{size}]";
     }
 }
