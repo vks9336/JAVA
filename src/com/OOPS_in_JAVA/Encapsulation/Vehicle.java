@@ -34,10 +34,6 @@ public class Vehicle {
     //using to our own toString() method to print the whole object in one call
     @Override
     public String toString() {
-        return "Vehicle : [" +
-                "Model=" + model +
-                ", Name='" + name + '\'' +
-                ", Number Plate='" + numberPlate + '\'' +
-                ']';
+        return STR."Vehicle : [Model=\{model}, Name='\{name}', Number Plate='\{numberPlate}']";
     }
 }

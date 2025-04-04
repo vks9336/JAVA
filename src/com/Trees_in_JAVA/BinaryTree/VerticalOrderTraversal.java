@@ -38,6 +38,8 @@ public class VerticalOrderTraversal {
         }
         return list;
     }
+
+
     //main method
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();

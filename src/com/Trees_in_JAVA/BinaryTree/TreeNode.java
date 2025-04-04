@@ -4,6 +4,7 @@ public class TreeNode {
     int data;
     public TreeNode left;
     public TreeNode right;
+    public int hd = Integer.MAX_VALUE;
 
     public TreeNode(int data) {
         this.data = data;

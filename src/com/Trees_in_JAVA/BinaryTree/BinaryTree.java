@@ -106,8 +106,8 @@ public class BinaryTree {
 
     }
 
-    public TreeNode flatten(TreeNode root){
-        if(root == null) return root;
+    public void flatten(TreeNode root){
+        if(root == null) return;
 
         List<Integer> list = new ArrayList<>();
         preorder(root, list);
@@ -121,6 +121,5 @@ public class BinaryTree {
         }
 
         root = dummyNode.right;
-        return root;
     }
 }
