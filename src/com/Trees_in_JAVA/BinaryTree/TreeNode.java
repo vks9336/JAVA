@@ -1,7 +1,7 @@
 package com.Trees_in_JAVA.BinaryTree;
 // creation of a tree
 public class TreeNode {
-    int data;
+    public int data;
     public TreeNode left;
     public TreeNode right;
     public int hd = Integer.MAX_VALUE;
