@@ -47,5 +47,4 @@ public class BottomView {
             System.out.printf("%d ",num);
         }
     }
-
 }

@@ -1,7 +1,6 @@
 package com.Arrays_in_JAVA;
 
 import java.util.Scanner;
-
 public class FirstAndLastOccurrence {
     //occurrence method
     public static int[] firstAndLastOccurrence(int[] arr, int target){

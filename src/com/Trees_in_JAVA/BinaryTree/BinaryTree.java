@@ -122,4 +122,28 @@ public class BinaryTree {
 
         root = dummyNode.right;
     }
+
+    //lowest common ancestor method to find the lca of given nodes
+    public TreeNode lca(TreeNode root, TreeNode p, TreeNode q){
+        if(root == null || root == p || root == q) return root;
+
+        TreeNode left = lca(root.left, p, q);
+        TreeNode right = lca(root.right, p, q);
+
+        if(left == null) return right;
+        else if(right == null) return left;
+        else return root;
+    }
+
+    //find method to find the nodes of a binary tree
+    public TreeNode find(TreeNode root, int val) {
+        if (root == null) return null;
+        if (root.data == val) return root;
+
+        TreeNode left = find(root.left, val);
+        if (left != null) return left;
+
+        return find(root.right, val);
+    }
+
 }

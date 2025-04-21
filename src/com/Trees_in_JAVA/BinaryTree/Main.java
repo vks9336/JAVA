@@ -35,5 +35,13 @@ public class Main {
         tree.flatten(tree.root);
         System.out.println("Tree after flatten : ");
         tree.preorder(tree.root);
+        System.out.println();
+
+        TreeNode p = tree.find(tree.root, 7);
+        TreeNode q = tree.find(tree.root, 6);
+
+        TreeNode lca = tree.lca(tree.root, p, q);
+        System.out.printf("Lowest Common Ancestor : %d", lca.data);
+        System.out.println();
     }
 }

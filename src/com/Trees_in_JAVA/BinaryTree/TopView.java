@@ -47,5 +47,4 @@ public class TopView {
             System.out.printf("%d ", num);
         }
     }
-
 }
