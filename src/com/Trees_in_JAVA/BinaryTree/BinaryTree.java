@@ -142,7 +142,6 @@ public class BinaryTree {
 
         TreeNode left = find(root.left, val);
         if (left != null) return left;
-
         return find(root.right, val);
     }
 

@@ -8,11 +8,11 @@ public class UsingMinHeap {
         int left = 2 * i + 1; // left child
         int right = 2 * i + 2; // right child
 
-        // If left child is smaller than root
+        // If left child is smaller than the root
         if (left < n && arr[left] < arr[smallest])
             smallest = left;
 
-        // If right child is smaller than smallest so far
+        // If right child is smaller than the smallest so far
         if (right < n && arr[right] < arr[smallest])
             smallest = right;
 
@@ -74,7 +74,7 @@ public class UsingMinHeap {
         int n = sc.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            System.out.print("Enter the element at " + i + " : ");
+            System.out.print("Enter the element at " + i + "th position : ");
             arr[i] = sc.nextInt();
         }
         System.out.println("Before sorting you array is : ");

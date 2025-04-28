@@ -36,7 +36,7 @@ public class UsingMaxHeap {
 
         // One by one extract elements from the heap
         for (int i = n - 1; i > 0; i--) {
-            // Move current root to the end
+            // Move the current root to the end
             int temp = arr[0];
             arr[0] = arr[i];
             arr[i] = temp;
