@@ -12,7 +12,7 @@ public class BoundaryTraversal {
 
     }
 
-    //Add left boundary
+    //Add left boundary to the 
     private static void addLeft(TreeNode root, List<Integer> list){
 
         TreeNode curr = root.left;
