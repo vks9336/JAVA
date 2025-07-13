@@ -12,9 +12,9 @@ public class PalindromeCheck {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the string that you want to check for palindrome : ");
-        String str = sc.nextLine();
-        String s = str.replaceAll("a-zA-Z0-9", " ").toLowerCase();
-        boolean result = isPalindrome(s,0,s.length() - 1);
+        String s = sc.nextLine();
+        String str = s.replaceAll("a-zA-Z0-9", " ").toLowerCase();
+        boolean result = isPalindrome(str,0,s.length() - 1);
         if(result){
             System.out.println("Your string is a Palindromic string.");
         }

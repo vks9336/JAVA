@@ -6,7 +6,7 @@ public class WildCardMatching {
         if(i < 0 && j < 0) return true;
         if(i < 0) return false;
         if(j < 0){
-            for(int k = i; k >= 0; k++){
+            for(int k = i; k >= 0; k--){
                 if(s.charAt(i) != '*') return false;
             }
             return true;
@@ -29,7 +29,7 @@ public class WildCardMatching {
         if(i < 0 && j < 0) return true;
         if(i < 0) return false;
         if(j < 0){
-            for(int k = i; k >= 0; k++){
+            for(int k = i; k >= 0; k--){
                 if(s.charAt(i) != '*') return false;
             }
             return true;
@@ -57,8 +57,8 @@ public class WildCardMatching {
     //main method
     public static void main(String[] args) {
         String s = "abcdefcd";
-        String t = "abc*cd";
-
+        String t = "abccd";
+//        System.out.println("true");
         boolean ans = isMatch(s, t);
         System.out.println(ans);
     }

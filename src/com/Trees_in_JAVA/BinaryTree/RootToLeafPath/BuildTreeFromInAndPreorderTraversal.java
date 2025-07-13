@@ -1,9 +1,8 @@
 package com.Trees_in_JAVA.BinaryTree.RootToLeafPath;
-
-import com.Trees_in_JAVA.BinaryTree.TreeNode;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import com.Trees_in_JAVA.BinaryTree.TreeNode;
 
 public class BuildTreeFromInAndPreorderTraversal {
     public static TreeNode buildTree(int[] preorder, int preStart, int preEnd,
@@ -22,8 +21,7 @@ public class BuildTreeFromInAndPreorderTraversal {
         for(int i = 0; i < inorder.length; i++){
             map.put(inorder[i], i);
         }
-        TreeNode root = buildTree(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1, map);
-        return root;
+        return buildTree(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1, map);
     }
 
     public static void main(String[] args) {
